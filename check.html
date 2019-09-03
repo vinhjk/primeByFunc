@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkPrime(number) {
+        var prime = number !== 1;
+        if (number === 0){
+            return -1;
+
+        }
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i === 0) {
+                prime = false;
+            }
+        }
+        return prime;
+    }
+
+    let num = parseInt(prompt("Enter a number :"));
+    let primes = checkPrime(num);
+    if (primes.valueOf() === true)
+        alert(num + " is a prime number !");
+    else alert(num + " is not a prime number !");
+</script>
+</body>
+</html>
